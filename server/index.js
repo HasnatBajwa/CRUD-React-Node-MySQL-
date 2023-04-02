@@ -30,7 +30,8 @@ db.connect((err) => {
         console.log("Connection to database Succesful");
     }
 })
-
+// Activating API Usage on front-end
+app.use(cors())
 // Activiting Client Data Access
 app.use(express.json())
 
