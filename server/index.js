@@ -81,8 +81,8 @@ app.post("/products", (req, res) => {
 
 
 // deleting Products
-app.delete("/products/:product_id",(req,res)=>{
-    const productId = req.params.product_id
+app.delete("/products/:id",(req,res)=>{
+    const productId = req.params.id
     const deleteProducts = "delete from pro where id = ?"
     db.query(deleteProducts, [productId], (err,data)=>{
         if (err) {
